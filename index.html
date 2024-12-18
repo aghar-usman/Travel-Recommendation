@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Decision Tree</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🌄🌊 Personalized Trip Recommendation</h1>
+
+        <!-- User Name Input -->
+        <label for="name">👤 Your Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <!-- Place Selection -->
+        <label for="place">🌄🌊 Where do you want to go?</label>
+        <select id="place">
+            <option value="Mountains">🌄 Mountains</option>
+            <option value="Beach">🌊 Beach</option>
+        </select>
+
+        <!-- Experience Selection -->
+        <label for="experience">⚡🧘 What kind of experience?</label>
+        <select id="experience">
+            <option value="Adventure">⚡ Adventure</option>
+            <option value="Relaxation">🧘 Relaxation</option>
+        </select>
+
+        <!-- Budget Selection -->
+        <label for="budget">💰 Your Budget:</label>
+        <select id="budget">
+            <option value="Low">💸 Low</option>
+            <option value="Medium">💵 Medium</option>
+            <option value="High">💎 High</option>
+        </select>
+
+        <!-- Generate Recommendation Button -->
+        <button onclick="generateRecommendation()">✨ Generate Recommendation</button>
+
+        <!-- Loading Animation -->
+        <div id="loading" style="display: none;">⏳ Generating your recommendation...</div>
+
+        <!-- Recommendation Card -->
+        <div id="recommendation-card" style="display: none;">
+            <img id="destination-img" src="" alt="Destination" class="image">
+            <p id="output"></p>
+        </div>
+    </div>
+
+    <!-- Audio Files -->
+    <audio id="mountain-sound" src="mountain.mp3"></audio>
+    <audio id="beach-sound" src="beach.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
